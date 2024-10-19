@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Event</title>
+  </head>
+  <body>
+    <button onclick="demo()">click to see the results</button>
+    <h2 id="result"></h2>
+    <script>
+      //onclick
+      //ondblclick
+      //onmouseover
+      //onmouseout
+      //onchange
+      //onkeyup
+      //onkeydown
+      //onsubmit
+      //onload
+      //onmousemove
+      //onfocus
+      function demo() {
+        // document.write(new Date()) //yesla override garxa means button ma click garepaxi tyo button haraunxa ra date matra display hunxa
+        // document.getElementById("result").innerHTML = new Date() //this will not override the data
+        document.querySelector("#result").innerHTMl = new Date()
+      }
+    </script>
+  </body>
+</html>

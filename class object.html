@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>class and Objects</title>
+  </head>
+  <body>
+    <script>
+      //class: is a blueprint that defines the nature of the future object
+      //object: is instance of a class or variable created from class
+      //constructor is automatically called when object is created
+      class Student {
+        constructor(name, age, address) {
+          this.fullname = name
+          this.age = age
+          this.address = address
+        }
+      }
+
+      //instance of the class
+      const obj_ram = new Student("Ram Yadav", 24, "Siraha")
+      document.write(`${obj_ram.fullname}<br> `)
+      const obj_shyam = new Student("Shyam Parajuli", 88, "gorkha")
+      document.write(`${obj_shyam.fullname} <br>`)
+    </script>
+  </body>
+</html>

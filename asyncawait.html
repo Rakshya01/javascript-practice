@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>asyncawait</title>
+  </head>
+  <body>
+    <!-- system chalirako xa tara result naaye samma kuriranu parxa is called asyncawait -->
+    <!DOCTYPE html>
+    <html lang="en">
+      <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>callback function</title>
+      </head>
+      <body>
+        <div></div>
+        <script>
+          //pahila call back function ani promise ani asyn like eutai eutai jastai ho
+          //euta function la kam vyayepaxi matra arko function la kam garxa
+          //yo tala ko array define gareko ho array ma 2ta element xa element lai object ko rup ma rakheko xa
+          const news = [
+            { title: "First Title", content: "content of the first title" },
+            { title: "second title", content: "content of the second title" },
+          ]
+
+          //define showNews()
+          const showNews = () => {
+            setTimeout(() => {
+              let result = ""
+              news.forEach((post) => {
+                result += `<li>${post.title}
+            <ul>
+                <li>${post.content}</li>
+                </ul>
+
+
+                </li>`
+              })
+              document.querySelector("div").innerHTML = result
+            }, 3000)
+          }
+          //call showNews()
+          showNews()
+
+          //define the function addNews()
+          // const addNews = (data, callback) => {
+          //   setTimeout(() => {
+          //     news.push(data)
+          //     callback()
+          //   }, 4000)
+          // }
+
+          //promise: promise request gareko kura aaauxa otherwise error aauxa
+          //promise ma duita parameter use hunxa resolve and reject
+          const addNews = (data) => {
+            return new Promise((resolve, reject) => {
+              setTimeout(() => {
+                news.push(data)
+                const error = false
+                if (!error) {
+                  resolve()
+                } else {
+                  reject("Error:something went wrong")
+                }
+              }, 4000)
+            })
+          }
+
+          const demoFunction = async () => {
+            await addNews({
+              title: "Third Title",
+              content: "Third content of the news",
+            })
+            showNews()
+          }
+          demoFunction()
+        </script>
+      </body>
+    </html>
+  </body>
+</html>
