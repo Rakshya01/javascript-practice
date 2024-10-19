@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>local storage</title>
+  </head>
+  <body>
+    <button id="btn">Remove</button>
+    <script>
+      //local storage is used to store data in browser
+      //session storage: time
+      //cart haru ma information haru rakhda use garinxa local storage
+      //key and value is used : paxi value fetch garna ko lagi we need key
+      localStorage.setItem("js", "This is stored in web browser")
+      const data = localStorage.getItem("js")
+      console.log(data)
+
+      const btn = document.getElementById("btn")
+      btn.addEventListener("click", () => {
+        localStorage.removeItem("js")
+      })
+
+      //JSON -> Javascript object notation
+      const student = {
+        name: "nabin lama",
+        age: 34,
+        gender: "male",
+        address: "kathmandu",
+        subject: ["html", "css", "js", "react"],
+      }
+      //localStorage.setItem("info", student)
+      //object lai string ma
+      localStorage.setItem("info", JSON.stringify(student))
+      const show = JSON.parse(localStorage.getItem("info"))
+      console.log(show)
+      console.log(show.name)
+
+      //multiple value send garna ko lagi ki ta array banaune ki ta object banaunu parxa like above
+    </script>
+  </body>
+</html>

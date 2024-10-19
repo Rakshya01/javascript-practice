@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Inheritance</title>
+  </head>
+  <body>
+    <script>
+      //inheritance: parent ko property child la inherit garnu
+      class Bus {
+        constructor(brand) {
+          this.busName = brand
+        }
+        //class vitra define gareko function lai method vaninxa
+        content() {
+          return `He owned a ${this.busName}`
+        }
+      }
+      //bus ko property model la ligna pauxa
+      class Model extends Bus {
+        constructor(brand, model) {
+          super(brand)
+          this.model = model
+          //super la parent ko constructor lai call garxa
+        }
+        views() {
+          return this.content() + "and the model is " + this.model
+        }
+      }
+      const obj_bus = new Model("Tata", "Deluxe")
+      document.write(obj_bus.views())
+    </script>
+  </body>
+</html>

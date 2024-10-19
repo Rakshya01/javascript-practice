@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Object Destructuring</title>
+  </head>
+  <body>
+    <script>
+      const student = {
+        name: "Ram Panthi",
+        gender: "Male",
+        age: 23,
+        height: 4.7,
+        address: "Pokhara",
+      }
+      //   const name = student.name
+      //   document.write(`${name}<br>`)
+      //   const gender = student.gender
+      //   document.write(`${gender}<br>`)
+      const { name, gender, age, height, address } = student
+      document.write(`${name}<br>`)
+      document.write(`${gender}<br>`)
+      document.write(`${address}<br>`)
+    </script>
+  </body>
+</html>

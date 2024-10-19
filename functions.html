@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Function</title>
+  </head>
+  <body>
+    <script>
+      //function is a block of code to perform the particular task
+      // function can be reuse
+      // function is used using parenthesis i.e () eg: demoFunction()
+
+      //define the function (hamla modern js ma function vanera lekhdainau)
+      //   function demoFunction() {
+      //     document.write(`this is a function <br>`);
+      //   }
+
+      // arrow function : vaneko chai function lai define garney euta tarika ho
+      const demoFunction = () => {
+        document.write(`this is a arrow function<br>`)
+      }
+
+      //call the function
+      demoFunction()
+
+      //function with arguments: function call garda with value pass garne
+      //   function addFunction(num1, num2) {
+      //     sum = num1 + num2
+      //     document.write(`The sum is ${sum} <br>`)
+      //   }
+
+      //using arrow function
+      const addFunction = (x, y) => {
+        sum = x + y
+        document.write(`The sum is ${sum} <br>`)
+      }
+      //call function
+      addFunction(20, 39)
+
+      //function with return type
+
+      //define the function
+      //   function squareFunction(num) {
+      //     return num ** 2
+      //   }
+
+      //using arrow function
+      //   const squareFunction=num=>num**2 it can also be done
+      const squareFunction = (num) => {
+        return num ** 2
+      }
+
+      //call the function
+      const result = squareFunction(10)
+      document.write(`${result} <br>`)
+
+      const test = squareFunction(15)
+      document.write(`${test} <br>`)
+    </script>
+  </body>
+</html>

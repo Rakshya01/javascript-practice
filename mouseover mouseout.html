@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>onmouseover and onmouseout</title>
+    <style>
+      .card {
+        height: 300px;
+        width: 500px;
+        margin: auto;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card" onmouseover="change()" onmouseout="change2()">
+      <img
+        src="https://images.pexels.com/photos/20582013/pexels-photo-20582013/free-photo-of-white-horses-grazing-green-grass-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+        alt="horse"
+      />
+    </div>
+    <script>
+      const change = () => {
+        document.querySelector(".card img").src =
+          "https://images.pexels.com/photos/18827668/pexels-photo-18827668/free-photo-of-brown-cow-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+      }
+      const change2 = () => {
+        document.querySelector(".card img").src =
+          "https://images.pexels.com/photos/20582013/pexels-photo-20582013/free-photo-of-white-horses-grazing-green-grass-on-a-pasture.jpeg?auto=compress&cs=tinysrgb&w=400&lazy=load"
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>switch practice</title>
+  </head>
+  <body>
+    <script>
+      const num1 = Number(prompt("Enter the first number"))
+      const num2 = Number(prompt("Enter the second number "))
+      const operator = prompt("Tell me what you want to do? eg:+-*/%")
+
+      switch (operator) {
+        case "+":
+          const sum = num1 + num2
+          document.write(`The sum is ${sum}`)
+          break
+        case "-":
+          const diff = num1 - num2
+          document.write(`The difference is ${diff}`)
+          break
+      }
+    </script>
+  </body>
+</html>

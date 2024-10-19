@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Map</title>
+  </head>
+  <body>
+    <script>
+      //map method creates new array by performing function on every element
+
+      //doesnot execute on empty array
+      //also doesnot change the original array
+      const numbers = [5, 10, 15, 20, 25, 30]
+      const result = numbers.map(function (x) {
+        return x * 2
+      })
+      document.write(`${result} <br>`)
+      document.write(`${numbers} <br>`)
+
+      //flatMap()
+      //filter: data filter garera naya array create garney
+
+      const filterData = numbers.filter((num) => {
+        return num > 5 && num < 30
+      })
+      document.write(`${filterData} <br>`)
+    </script>
+  </body>
+</html>

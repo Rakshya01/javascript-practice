@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Introduction of javascript</title>
+  </head>
+  <body>
+    <script>
+      document.write("Hello World!!");
+      alert("This is a alert message");
+      prompt("This is a user input", "hello");
+      console.log("It is used to check the error or data");
+
+      //data types
+      //number(interger, float): 12 12.5
+      //string: "hi ", "23"
+      //object: key value pair
+      // array: js has one dimension array : array is a collection of elements
+      //boolean: true or false
+
+      //it is a case sensetive
+
+      //variable: container to store values
+      //we can declare variable either using var, let or const
+      //   let is dynamic and const cannot be changed
+
+      //while declaring variable name numeric value at the beginning must be avoided, special character except underscore must be avoided also predefined methods and keywords of js must  be avoided.
+      document.write("<br>");
+      var x = 20;
+      document.write(x);
+
+      //template literals(``)
+
+      document.write(`<br> The value is ${x}`);
+      var x = "test";
+      document.write(`${x} <br>`);
+
+      let firstName = "Rakshya";
+      let lastName = "Kunwar";
+      document.write(`My name is ${firstName} ${lastName} <br>`);
+
+      firstName = "ram";
+      document.write(`${firstName}`);
+
+      const y = 20;
+      //   y = 21;
+      document.write(`${y} <br>`);
+
+      //to check datatypes
+      document.write(typeof y);
+      document.write(`<br>`);
+      document.write(typeof "hello");
+      document.write(`<br>`);
+
+      //arithmetic operators
+      //** : power
+
+      const a = 23;
+      const b = 34;
+      const sum = a + b;
+      document.write(`The addition is ${sum} <br>`);
+
+      const c = 23;
+      const d = 34;
+      const difference = c - d;
+      document.write(`The difference is ${difference} <br>`);
+      const e = 23;
+      const f = 34;
+      const multi = e * f;
+      document.write(`The multiplication is ${multi} <br>`);
+      const g = 23;
+      const h = 34;
+      const divide = g / h;
+      document.write(`The division is ${divide} <br>`);
+      const i = 23;
+      const j = 34;
+      const mod = i % j;
+      document.write(`The remainder is ${mod} <br>`);
+    </script>
+  </body>
+</html>

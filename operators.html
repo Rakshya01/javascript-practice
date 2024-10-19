@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Operators</title>
+  </head>
+  <body>
+    <script>
+      // assignment operator -> used to assign the value
+      // = -> assign
+      // += -> a+=b is same as a=a+b
+      // -= -> a-=b is same as a=a-b
+      // *= /= **= etc
+
+      let x = 10;
+      let y = 20;
+      x += y;
+      document.write(`${x} <br>`);
+      //here it will take value of x as 30
+      x -= 5;
+      document.write(`${x} <br>`);
+
+      //let ko thau ma const vako vaye we couldnot assign the values like this
+
+      //comparison operators -> used to compare the values
+      // == -> equal to
+      // === -> identical equal value and same data type
+      // != -> not equal to
+      // !== -> not equal value or different data types
+      // <, <=, >, >=
+
+      const a = 20;
+      const b = 15;
+      document.write(a == b);
+      document.write("<br>");
+      document.write(a != b);
+      document.write("<br>");
+      document.write(a !== b);
+      document.write("<br>");
+      document.write(a >= b);
+      document.write("<br>");
+      document.write(a <= b);
+      document.write("<br>");
+      document.write(a === b);
+
+      //logical operator
+      //and(&&) returns true if all statements are true
+      // or(||) returns true if any one statement is true
+      // not(!) inverse the result
+
+      const test = 12 > 24 && 23 > 12;
+      document.write(`<br> ${test}`);
+
+      //bitwise operator
+      //&(AND) 5&1  0101 & 0001 -> 0001
+      //|(OR) 5|1 -> 0101
+      //^(XOR) 5^1 ->0100 same means 0
+    </script>
+  </body>
+</html>

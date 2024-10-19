@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Reduce</title>
+  </head>
+  <body>
+    <script>
+      //reduce method runs a function on every array element to returns a single value
+      //reduce batw euta single value matra aauxa
+
+      const numbers = [5, 7, 8, 9, 67, 66]
+      const total = numbers.reduce((accumulator, currentValue) => {
+        return accumulator + currentValue
+      }, 8)
+      document.write(`${total} <br>`)
+      //hamila cart ma total price garda aauxa ni testo ma kam lagxa
+
+      //reduceRight(): paxadi batw joddai aauxa
+
+      //every(): checks if all element passes a test
+      const check = numbers.every((num) => {
+        return num > 0
+      })
+      document.write(`${check} <br>`)
+
+      //some(): checks if any element passes a test
+      //spread(): expands an iterable into more elements
+      const test = ["a", "b", "c"]
+      const data = [...numbers, ...test]
+      document.write(`${data} <br>`)
+
+      const result = [numbers, test]
+      document.write(`${result[0]}`)
+      console.log(`${result}`)
+    </script>
+  </body>
+</html>
